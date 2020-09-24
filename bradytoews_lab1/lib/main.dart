@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(MyApp());
@@ -32,19 +33,28 @@ class MyApp extends StatelessWidget {
                   Container(
                     height: 100.0,
                     width: 100.0,
-                    color: Colors.orange,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Colors.orange,
+                      border: Border.all(color: Colors.black, width: 3),
+                    ),
                     child: Center(
                       child: Text(
                         'Container 1',
                       ),
                     ),
                   ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.white,
-                    child: Text(
-                      'Container 2',
+                  Transform.rotate(
+                    angle: pi / 4,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.white,
+                      child: Center(
+                        child: Text(
+                          'Container 2',
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -52,24 +62,34 @@ class MyApp extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Expanded(
-                    child: Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.yellow,
-                      child: Center(
-                        child: Text(
-                          'Container 3',
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 100.0,
+                        width: 100.0,
+                        color: Colors.yellow,
+                        child: Align(
+                          alignment: FractionalOffset.bottomCenter,
+                          child: Text(
+                            'Container 3',
+                          ),
                         ),
                       ),
                     ),
                   ),
                   Expanded(
-                    child: Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.blue,
-                      child: Text(
-                        'Container 4',
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        height: 100.0,
+                        width: 100.0,
+                        color: Colors.blue,
+                        child: Align(
+                          alignment: FractionalOffset.centerRight,
+                          child: Text(
+                            'Container 4',
+                          ),
+                        ),
                       ),
                     ),
                   ),
