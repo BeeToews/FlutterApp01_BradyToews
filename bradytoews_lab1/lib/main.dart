@@ -100,7 +100,11 @@ class MyApp extends StatelessWidget {
                   Container(
                     height: 100.0,
                     width: 100.0,
-                    color: Colors.black,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.black,
+                      border: Border.all(color: Colors.white, width: 3),
+                    ),
                     child: Center(
                       child: Text(
                         'Container 5',
