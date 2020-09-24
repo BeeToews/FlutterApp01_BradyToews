@@ -20,12 +20,6 @@ class MyApp extends StatelessWidget {
         body: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //mainAxisAlignment: MainAxisAlignment.start,
-            //mainAxisAlignment: MainAxisAlignment.center,
-            //mainAxisAlignment: MainAxisAlignment.end,
-            //crossAxisAlignment: CrossAxisAlignment.stretch,
-            //crossAxisAlignment: CrossAxisAlignment.start,
-            //crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Column(
                 //Column 1
@@ -96,32 +90,38 @@ class MyApp extends StatelessWidget {
                 ],
               ),
               Column(
-                children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black,
-                      border: Border.all(color: Colors.white, width: 3),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Container 5',
-                        style: new TextStyle(
-                          color: Colors.white,
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.black,
+                        border: Border.all(color: Colors.white, width: 3),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Container 5',
+                          style: new TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.red,
-                    child: Text(
-                      'Con 6',
-                      style: new TextStyle(
-                        fontSize: 30.0,
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.red,
+                      child: Text(
+                        'Con 6',
+                        style: new TextStyle(
+                          fontSize: 30.0,
+                        ),
                       ),
                     ),
                   ),
